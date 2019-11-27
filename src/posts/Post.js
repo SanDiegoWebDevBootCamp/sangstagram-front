@@ -1,7 +1,7 @@
 import React from 'react';
-import Photo from './photo';
-import Caption from './caption';
-import PublishedDate from './publishedDate'
+import Photo from './Photo';
+import Caption from './Caption';
+import PublishedDate from './PublishedDate'
 
 class Post extends React.Component {
     render() {

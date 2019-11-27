@@ -1,7 +1,7 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import Post from '../post'
-import PublishedDate from '../post/publishedDate'
+import Post from '../posts/Post'
+import PublishedDate from '../posts/PublishedDate'
 
 export default {
   title: 'Post',
