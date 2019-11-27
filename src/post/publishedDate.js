@@ -7,3 +7,5 @@ class PublishedDate extends React.Component{
         )
     }
 }
+
+export default PublishedDate

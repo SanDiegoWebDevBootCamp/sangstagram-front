@@ -7,3 +7,5 @@ class UserId extends React.Component{
         )
     }
 }
+
+export default UserId
