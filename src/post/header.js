@@ -1,13 +1,14 @@
 import React from 'react';
-import publishedDate from './publishedDate'
+import PublishedDate from './publishedDate'
+import UserId from './userId'
 
 class Header extends React.Component{
 
     render() {
         return( 
             <>
-                <publishedDate/>
-                <userId/>
+                <PublishedDate/>
+                <UserId/>
             </>
         )
     }
