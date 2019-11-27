@@ -1,7 +1,9 @@
 import React from 'react';
+import React from 'react';
+import Photo from './photo';
+import Caption from './caption';
 
 class Post extends React.Component {
-
     render() {
         const { post } = this.props;
         const { photoUrl, caption } = post;
@@ -9,7 +11,7 @@ class Post extends React.Component {
         return (
             <>
                 <Photo photoUrl={photoUrl} />
-                <Caption  caption={caption} />
+                <Caption caption={caption} />
             </>
         )
     }
