@@ -2,9 +2,11 @@ import React from 'react';
 
 class Caption extends React.Component {
     render() {
-        <p>
-            {this.props.caption}
-        </p>
+        return (
+            <p>
+                {this.props.caption}
+            </p>
+        )
     }
 }
 
