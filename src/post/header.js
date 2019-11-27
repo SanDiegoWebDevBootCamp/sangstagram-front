@@ -1,6 +1,6 @@
 import React from 'react';
-import PublishedDate from './publishedDate'
-import UserId from './userId'
+import PublishedDate from './PublishedDate'
+import UserId from './UserId'
 
 class Header extends React.Component{
 
