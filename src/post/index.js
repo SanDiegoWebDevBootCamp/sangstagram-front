@@ -1,6 +1,6 @@
 import React from 'react';
-import Photo from './photo';
-import Caption from './caption';
+import Photo from './Photo';
+import Caption from './Caption';
 
 class Post extends React.Component {
     render() {
