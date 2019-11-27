@@ -1,5 +1,4 @@
 import React from 'react';
-import React from 'react';
 import Photo from './photo';
 import Caption from './caption';
 
