@@ -7,8 +7,8 @@ class Header extends React.Component{
     render() {
         return( 
             <>
-                <PublishedDate/>
-                <UserId/>
+                <PublishedDate publishedDate={this.props.publishedDate}/>
+                <UserId userId={this.props.userId}/>
             </>
         )
     }
