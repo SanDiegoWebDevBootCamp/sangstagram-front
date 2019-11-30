@@ -1,6 +1,6 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import { range } from 'lodash'
+import { range, sortBy } from 'lodash'
 import * as faker from 'faker'
 import Comments from '../Comments'
 
@@ -16,12 +16,12 @@ const buildComments = (numberOfComments) => {
         avatar: faker.image.avatar()
       },
       comment: faker.lorem.paragraph(),
-      date: faker.date.recent()
+      date: faker.date.past()
     }
   ));
 };
 
-const comments = buildComments(5)
+const comments = sortBy(buildComments(5), comment => comment.date);
 
 export const defaultRendering = () => <Comments comments={comments} />;
 export const noCommentsRendering = () => <Comments comments={[]} />;
