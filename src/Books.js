@@ -13,18 +13,20 @@ const BOOKS = gql`
 
 
 function Books() {
-  const { loading, error, data } = useQuery(BOOKS);
+    const { loading, error, data } = useQuery(BOOKS);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
 
-  return data.books.map(({ title, author }) => (
-    <div key={title}>
-      <p>
-        {title}: {author}
-      </p>
-    </div>
-  ));
+    return data.books.map(({ title, author }) => (
+        <div key={title}>
+            <p>
+                {title}
+:
+                {author}
+            </p>
+        </div>
+    ));
 }
 
-export default Books
+export default Books;

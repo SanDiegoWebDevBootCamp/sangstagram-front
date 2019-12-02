@@ -1,13 +1,15 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography'
+import Typography from '@material-ui/core/Typography';
 
 class Likes extends React.Component {
     render() {
         return (
             <Typography>
-                Likes {this.props.likes}
+                Likes
+                {' '}
+                {this.props.likes}
             </Typography>
-        )
+        );
     }
 }
 

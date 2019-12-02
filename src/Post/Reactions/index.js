@@ -1,18 +1,17 @@
 import React from 'react';
-import Likes from './Likes'
-import Comments from './Comments'
-import './reactions.css'
+import Likes from './Likes';
+import Comments from './Comments';
+import './reactions.css';
 
-class Reactions extends React.Component{
-
+class Reactions extends React.Component {
     render() {
-        return( 
-            <div className='reactions'>
-                <Likes likes={this.props.likes}/>
-                <Comments comments={this.props.comments}/>
+        return (
+            <div className="reactions">
+                <Likes likes={this.props.likes} />
+                <Comments comments={this.props.comments} />
             </div>
-        )
+        );
     }
 }
 
-export default Reactions
+export default Reactions;

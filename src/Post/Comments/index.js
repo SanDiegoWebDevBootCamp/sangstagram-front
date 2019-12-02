@@ -1,14 +1,15 @@
-import React from 'react'
+import React from 'react';
 import List from '@material-ui/core/List';
-import Comment from './Comment'
+import Comment from './Comment';
 
-const Comments = ({comments}) => {
+const renderComment = ({ user, comment, date }) => (
+    <Comment user={user} comment={comment} date={date} />
+);
 
-    return (
-        <List>
-            {comments.map(comment => (<Comment {...comment} />))}
-        </List>
-    )
-}
+const Comments = ({ comments }) => (
+    <List>
+        {comments.map((comment) => renderComment(comment))}
+    </List>
+);
 
-export default Comments
+export default Comments;

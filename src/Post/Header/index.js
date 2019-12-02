@@ -1,18 +1,17 @@
 import React from 'react';
-import PublishedDate from './PublishedDate'
-import UserId from './UserId'
-import './header.css'
+import PublishedDate from './PublishedDate';
+import UserId from './UserId';
+import './header.css';
 
-class Header extends React.Component{
-
+class Header extends React.Component {
     render() {
-        return( 
+        return (
             <div className="header">
-                <PublishedDate publishedDate={this.props.publishedDate}/>
-                <UserId userId={this.props.userId}/>
+                <PublishedDate publishedDate={this.props.publishedDate} />
+                <UserId userId={this.props.userId} />
             </div>
-        )
+        );
     }
 }
 
-export default Header
+export default Header;

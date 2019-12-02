@@ -7,7 +7,7 @@ class Caption extends React.Component {
             <Typography variant="h6" gutterBottom>
                 {this.props.caption}
             </Typography>
-        )
+        );
     }
 }
 
