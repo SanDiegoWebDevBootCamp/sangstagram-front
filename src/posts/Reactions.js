@@ -1,15 +1,16 @@
 import React from 'react';
-import Likes from './Likes'
-import Comments from './Comments'
+import Sangs from './ReactionSangs'
+import Comments from './ReactionComments'
+import './reactions.css'
 
 class Reactions extends React.Component{
-
+    
     render() {
         return( 
-            <>
-                <Likes/>
-                <Comments/>
-            </>
+            <div className="reactions">
+                <Sangs sangs={this.props.sangs}/>
+                <Comments comments={this.props.comments}/>
+            </div>
         )
     }
 }

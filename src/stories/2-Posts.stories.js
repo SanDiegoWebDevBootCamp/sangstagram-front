@@ -10,7 +10,8 @@ export default {
 const post = {
     photoUrl: 'http://writingexercises.co.uk/images2/randomimage/slimy.jpg',
     caption: 'Cat is cute',
-    publishedDate: new Date()
+    publishedDate: new Date(),
+    reactions: '1'
 }
 const publishedDate = new Date();
 
