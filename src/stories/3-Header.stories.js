@@ -9,7 +9,8 @@ export default {
   title: 'Header',
 };
 
-const publishedDate = new Date();
+
+const publishedDate = new Date(); 
 
 const userId = 'byum1996'
 

@@ -1,12 +1,13 @@
 import React from 'react'; 
+import Typography from '@material-ui/core/Typography';
 
 class PublishedDate extends React.Component{
     render(){
         return(
-            <div className="left-align-board">
-                <p>{this.props.publishedDate.toString()}</p>
-            </div>
-            
+            <Typography>
+                {this.props.publishedDate.toLocaleDateString()} {this.props.publishedDate.toLocaleTimeString()}
+            </Typography>
+               
         )
     }
 }

@@ -1,15 +1,15 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 class UserId extends React.Component{
     render(){
         return(
-            <button onClick={() => console.log(this.props.userId)}>
+            <Typography onClick={() => console.log(this.props.userId)}>
                 {this.props.userId}
-            </button>
+            </Typography>
+            
         )
     }
 }
-
-
 
 export default UserId
