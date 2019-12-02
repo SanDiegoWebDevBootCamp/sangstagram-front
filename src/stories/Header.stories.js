@@ -1,9 +1,8 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
-import Post from '../posts/Post'
-import PublishedDate from '../posts/PublishedDate'
-import UserId from '../posts/UserId'
-import Header from '../posts/Header'
+import PublishedDate from '../Post/Header/PublishedDate'
+import UserId from '../Post/Header/UserId'
+import Header from '../Post/Header'
 
 export default {
   title: 'Header',

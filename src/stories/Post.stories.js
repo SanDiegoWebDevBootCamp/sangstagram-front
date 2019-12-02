@@ -2,12 +2,11 @@ import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { range, sortBy } from 'lodash'
 import * as faker from 'faker'
-import Comments from '../Comments'
+import Post from '../Post'
 
 export default {
-  title: 'Comments',
+  title: 'Post',
 };
-
 const buildComments = (numberOfComments) => {
   return range(0, numberOfComments).map(() => (
     {
@@ -23,5 +22,16 @@ const buildComments = (numberOfComments) => {
 
 const comments = sortBy(buildComments(5), comment => comment.date);
 
-export const defaultRendering = () => <Comments comments={comments} />;
-export const noCommentsRendering = () => <Comments comments={[]} />;
+const post = {
+    user: {
+      username: 'byum1996'
+    },
+    photoUrl: faker.image.nature(),
+    caption: 'Caption sample',
+    publishedDate: new Date(),
+    likes: 100,
+    comments: comments
+}
+const publishedDate = new Date();
+
+export const defaultRendering = () => <Post post={post} />;
