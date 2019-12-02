@@ -1,11 +1,12 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 class Caption extends React.Component {
     render() {
         return (
-            <p>
+            <Typography variant="h6" gutterBottom>
                 {this.props.caption}
-            </p>
+            </Typography>
         )
     }
 }
