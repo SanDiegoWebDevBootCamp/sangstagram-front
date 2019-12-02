@@ -1,11 +1,12 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 class UserId extends React.Component{
     render(){
         return(
-            <p>
+            <Typography onClick={() => console.log(this.props.userId)}>
                 {this.props.userId}
-            </p>
+            </Typography>
         )
     }
 }
