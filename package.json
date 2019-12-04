@@ -12,6 +12,7 @@
     "apollo-boost": "^0.4.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "faker": "^4.1.0",
     "graphql": "^14.5.8",
     "lodash": "^4.17.15",
     "react": "^16.12.0",
@@ -26,7 +27,8 @@
     "test:ci": "npm run test -- --ci --reporters=default --reporters=jest-junit",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,7 +52,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "faker": "^4.1.0",
     "jest-enzyme": "^7.1.2",
     "jest-junit": "^9.0.0",
     "react-test-renderer": "^16.12.0"
