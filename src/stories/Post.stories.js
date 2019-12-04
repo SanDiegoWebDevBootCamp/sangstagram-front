@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import { range, sortBy } from 'lodash';
 import * as faker from 'faker';
 import Post from '../Post';
@@ -30,6 +29,5 @@ const post = {
     likes: 100,
     comments,
 };
-const publishedDate = new Date();
 
 export const defaultRendering = () => <Post post={post} />;

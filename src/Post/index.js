@@ -5,26 +5,22 @@ import Header from './Header';
 import Reactions from './Reactions';
 import Comments from './Comments';
 
-class Post extends React.Component {
-    render() {
-        const { post } = this.props;
-        console.log('post', post);
-        const {
-            photoUrl, caption, datePublished, user, likes, comments,
-        } = post;
-        const publishedDate = new Date(datePublished)
-        const { username } = user;
+const Post = ({ post }) => {
+    const {
+        photoUrl, caption, datePublished, user, likes, comments,
+    } = post;
+    const publishedDate = new Date(datePublished);
+    const { username } = user;
 
-        return (
-            <>
-                <Header publishedDate={publishedDate} userId={username} />
-                <Photo photoUrl={photoUrl} />
-                <Caption caption={caption} />
-                <Reactions likes={likes} comments={comments} />
-                <Comments comments={comments} />
-            </>
-        );
-    }
-}
+    return (
+        <>
+            <Header publishedDate={publishedDate} userId={username} />
+            <Photo photoUrl={photoUrl} />
+            <Caption caption={caption} />
+            <Reactions likes={likes} comments={comments} />
+            <Comments comments={comments} />
+        </>
+    );
+};
 
 export default Post;

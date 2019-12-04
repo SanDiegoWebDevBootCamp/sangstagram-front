@@ -1,32 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import Form from './Form';
 
-class NewPost extends React.Component{
-    constructor(props) {
-        super(props);
-        this.buttonClicked = this.buttonClicked.bind(this);
-        this.state = {shouldDisplayForm: false};
+const NewPost = () => {
+    const [shouldDisplayForm, setShouldDisplayForm] = useState(false);
+
+    // declare event handler
+    const buttonClicked = () => setShouldDisplayForm(true);
+
+    if (shouldDisplayForm) {
+        return (
+            <Form />
+        );
     }
 
-    // event handler, onClick event handler
-    buttonClicked() {
-        this.setState({shouldDisplayForm: true});
-    }
+    return (
+        <Button onClick={buttonClicked} variant="contained" color="primary">
+                New Post
+        </Button>
+    );
+};
 
-    render(){
-        if (this.state.shouldDisplayForm) {
-            return (
-                <Form />
-            )
-        } else {
-            return(
-                <Button onClick={this.buttonClicked} variant="contained" color="primary">
-                    New Post
-                </Button>
-            )
-        }
-    }
-}
-
-export default NewPost
+export default NewPost;

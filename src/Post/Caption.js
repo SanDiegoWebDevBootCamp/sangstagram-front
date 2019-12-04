@@ -1,14 +1,14 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
-class Caption extends React.Component {
-    render() {
-        return (
-            <Typography variant="h6" gutterBottom>
-                {this.props.caption}
-            </Typography>
-        );
-    }
-}
+const Caption = (props) => {
+    const { caption } = props;
+
+    return (
+        <Typography variant="h6" gutterBottom>
+            {caption}
+        </Typography>
+    );
+};
 
 export default Caption;

@@ -1,17 +1,16 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 
-class PublishedDate extends React.Component {
-    render() {
-        return (
-            <Typography>
-                {this.props.publishedDate.toLocaleDateString()}
-                {' '}
-                {this.props.publishedDate.toLocaleTimeString()}
-            </Typography>
+const PublishedDate = (props) => {
+    const { publishedDate } = props;
 
-        );
-    }
-}
+    return (
+        <Typography>
+            {publishedDate.toLocaleDateString()}
+            {' '}
+            {publishedDate.toLocaleTimeString()}
+        </Typography>
+    );
+};
 
 export default PublishedDate;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 import PublishedDate from '../Post/Header/PublishedDate';
 import UserId from '../Post/Header/UserId';
 import Header from '../Post/Header';
