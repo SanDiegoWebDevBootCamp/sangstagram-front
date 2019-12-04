@@ -8,9 +8,11 @@ import Comments from './Comments';
 class Post extends React.Component {
     render() {
         const { post } = this.props;
+        console.log('post', post);
         const {
-            photoUrl, caption, publishedDate, user, likes, comments,
+            photoUrl, caption, datePublished, user, likes, comments,
         } = post;
+        const publishedDate = new Date(datePublished)
         const { username } = user;
 
         return (

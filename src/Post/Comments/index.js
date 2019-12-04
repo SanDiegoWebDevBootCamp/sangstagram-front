@@ -3,7 +3,7 @@ import List from '@material-ui/core/List';
 import Comment from './Comment';
 
 const renderComment = ({ user, comment, date }) => (
-    <Comment user={user} comment={comment} date={date} />
+    <Comment user={user} comment={comment} date={new Date(date)} />
 );
 
 const Comments = ({ comments }) => (

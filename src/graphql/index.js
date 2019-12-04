@@ -5,6 +5,4 @@ const client = new ApolloClient({
     uri: 'http://localhost:5000/graphql',
 });
 
-export {
-    client,
-};
+export default client;
