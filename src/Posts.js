@@ -1,7 +1,9 @@
 import React from 'react';
+import Box from '@material-ui/core/Box';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import Post from './Post';
+
 
 const POSTS = gql`
     {
@@ -37,7 +39,7 @@ function Posts() {
 
     return (
         <>
-            { data.posts.map((post) => <Post key={post.id} post={post} />)}
+            { data.posts.map((post) => <Box p={1}><Post key={post.id} post={post} /></Box>)}
         </>
     );
 }

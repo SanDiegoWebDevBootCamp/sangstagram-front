@@ -9,7 +9,7 @@ function App() {
     return (
         <ApolloProvider client={client}>
             <CssBaseline />
-            <Container maxWidth="sm">
+            <Container maxWidth="md">
                 <Navigation />
             </Container>
         </ApolloProvider>
