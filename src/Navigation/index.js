@@ -4,8 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import LinkTab from './LinkTab';
 import TabPanel from './TabPanel';
+import UrlRouter from '../UrlRouter';
 import Posts from '../Posts';
 import Following from '../Following';
+import Profile from '../Profile';
 
 function a11yProps(index) {
     return {
@@ -38,9 +40,9 @@ function Navigation() {
                     onChange={handleChange}
                     aria-label="nav tabs example"
                 >
-                    <LinkTab label="Posts" href="/drafts" {...a11yProps(0)} />
-                    <LinkTab label="Following" href="/trash" {...a11yProps(1)} />
-                    <LinkTab label="Page Three" href="/spam" {...a11yProps(2)} />
+                    <LinkTab label="Posts" href="/" {...a11yProps(0)} />
+                    <LinkTab label="Following" href="/following" {...a11yProps(1)} />
+                    <LinkTab label="Profile" href="/profile" {...a11yProps(2)} />
                 </Tabs>
             </AppBar>
             <TabPanel value={value} index={0}>
@@ -50,7 +52,7 @@ function Navigation() {
                 <Following />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Page Three
+                <Profile />
             </TabPanel>
         </div>
     );
