@@ -1,30 +1,37 @@
 import React from 'react';
-import { range, sortBy } from 'lodash';
+import { useQuery } from '@apollo/react-hooks';
+import { gql } from 'apollo-boost';
 import List from '@material-ui/core/List';
 import Box from '@material-ui/core/Box';
-import * as faker from 'faker';
 import FollowingLine from './FollowingLine';
 
-const buildUsers = (numberOfUsers) => range(0, numberOfUsers).map(() => (
-    {
-        ...faker.helpers.userCard(),
-        avatar: faker.image.avatar(),
+const FOLLOWING = gql`
+{
+    following {
+      id
+      username
+      avatar
     }
-));
-
-const users = buildUsers(5);
+}
+`;
 
 const renderFollowingLine = (user) => (
     <Box p={1}>
         <FollowingLine user={user} />
     </Box>
-    
 );
 
-const Following = () => (
-    <List>
-        {users.map((user) => renderFollowingLine(user))}
-    </List>
-);
+const Following = () => {
+    const { loading, error, data } = useQuery(FOLLOWING);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error :(</p>;
+
+    return (
+        <List>
+            {data.following.map((user) => renderFollowingLine(user))}
+        </List>
+    );
+};
 
 export default Following;
