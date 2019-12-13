@@ -54,6 +54,7 @@ export default function BasicExample() {
                         <Profile />
                     </Route>
                 </Switch>
+                <h1>Footer</h1>
             </div>
         </Router>
     );

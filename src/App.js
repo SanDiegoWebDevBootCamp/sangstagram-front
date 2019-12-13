@@ -11,7 +11,7 @@ function App() {
         <ApolloProvider client={client}>
             <CssBaseline />
             <Container maxWidth="md">
-                <UrlRouter />
+                <Navigation />
             </Container>
         </ApolloProvider>
     );
