@@ -4,7 +4,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import client from './graphql';
 import Navigation from './Navigation';
-import UrlRouter from './UrlRouter';
 
 function App() {
     return (
