@@ -20,6 +20,7 @@ const NavBar = () => (
             <LinkTab label="Posts" href="/" {...a11yProps(0)} />
             <LinkTab label="Following" href="/following" {...a11yProps(1)} />
             <LinkTab label="Profile" href="/profile" {...a11yProps(2)} />
+            <LinkTab label="New Post" href="/newpost" {...a11yProps(1)} />
         </Tabs>
     </AppBar>
 );
