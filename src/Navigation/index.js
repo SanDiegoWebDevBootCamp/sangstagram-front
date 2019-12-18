@@ -9,6 +9,7 @@ import NavBar from './NavBar';
 import Posts from '../Posts';
 import Following from '../Following';
 import Profile from '../Profile';
+import NewPost from '../Post/New';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -33,6 +34,10 @@ function Navigation() {
                     <Route path="/profile">
                         <Profile />
                     </Route>
+                    <Route path="/newpost">
+                        <NewPost />
+                    </Route>
+
                 </Switch>
             </div>
         </Router>
