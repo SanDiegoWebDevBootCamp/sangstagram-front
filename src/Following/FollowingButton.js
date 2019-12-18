@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@material-ui/core';
 
 const FollowingButton = () => (
-    <Button>Following</Button>
+    <Button variant="outlined" color="secondary">Following</Button>
 );
 
 export default FollowingButton;
