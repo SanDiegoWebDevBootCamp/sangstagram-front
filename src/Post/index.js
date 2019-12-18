@@ -7,7 +7,7 @@ import Reactions from './Reactions';
 import Comments from './Comments';
 import './Post.css';
 
-const Post = ({ post }) => {
+const Post = ({ post, onNewComment }) => {
     const {
         photoUrl, caption, datePublished, user, likes, comments,
     } = post;
@@ -24,7 +24,7 @@ const Post = ({ post }) => {
                     <Reactions likes={likes} comments={comments} />
                 </Box>
                 <Box p={1} className="right">
-                    <Comments comments={comments} />
+                    <Comments comments={comments} onNewComment={onNewComment} />
                 </Box>
             </div>
         </>

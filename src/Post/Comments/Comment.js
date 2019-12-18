@@ -5,15 +5,17 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 
 const Comment = ({ user, comment, date }) => (
-    <ListItem>
-        <ListItemAvatar>
-            <Avatar alt={user.name} src={user.avatar} />
-        </ListItemAvatar>
-        <ListItemText
-            primary={comment}
-            secondary={date.toDateString()}
-        />
-    </ListItem>
+    <>
+        <ListItem>
+            <ListItemAvatar>
+                <Avatar alt={user.name} src={user.avatar} />
+            </ListItemAvatar>
+            <ListItemText
+                primary={comment}
+                secondary={date.toDateString()}
+            />
+        </ListItem>
+    </>
 );
 
 export default Comment;

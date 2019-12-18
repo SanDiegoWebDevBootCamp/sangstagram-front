@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Navigation() {
+function Navigation({ onNewComment }) {
     const classes = useStyles();
     return (
         <Router>
@@ -25,7 +25,7 @@ function Navigation() {
                 <NavBar />
                 <Switch>
                     <Route exact path="/">
-                        <Posts />
+                        <Posts onNewComment={onNewComment}/>
                     </Route>
                     <Route path="/following">
                         <Following />
