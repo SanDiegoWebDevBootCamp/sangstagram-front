@@ -1,14 +1,13 @@
 import React from 'react';
 import Tab from '@material-ui/core/Tab';
+import { Link } from 'react-router-dom';
 
-function LinkTab(props) {
+function LinkTab({ href, ...rest }) {
     return (
         <Tab
-            component="a"
-            onClick={event => {
-                event.preventDefault();
-            }}
-            {...props}
+            component={Link}
+            to={href}
+            {...rest}
         />
     );
 }
