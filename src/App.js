@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import client from './graphql';
 import Navigation from './Navigation';
+import SidebarNavigation from './SidebarNavigation'
 
 // this is a temporary user
 // will eventually get it from backend after authentication
@@ -30,7 +31,7 @@ function App() {
         <ApolloProvider client={client}>
             <CssBaseline />
             <Container maxWidth="md">
-                <Navigation onNewComment={onNewComment}/>
+                <SidebarNavigation onNewComment={onNewComment}/>
             </Container>
         </ApolloProvider>
     );
