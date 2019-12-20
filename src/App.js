@@ -10,7 +10,8 @@ import Following from './Following';
 import Profile from './Profile';
 import NewPost from './Post/New';
 
-const authUrl = `${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/auth/google`;
+console.log(process.env.REACT_APP_BACKEND_BASEURL);
+const authUrl = `${process.env.REACT_APP_BACKEND_BASEURL || 'http://localhost:5000'}/auth/google`;
 
 // this is a temporary user
 // will eventually get it from backend after authentication
