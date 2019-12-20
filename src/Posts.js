@@ -31,7 +31,7 @@ const POSTS = gql`
 `;
 
 
-function Posts() {
+function Posts({ onNewComment }) {
     const { loading, error, data } = useQuery(POSTS);
 
     if (loading) return <p>Loading...</p>;
@@ -39,7 +39,7 @@ function Posts() {
 
     return (
         <>
-            { data.posts.map((post) => <Box p={1}><Post key={post.id} post={post} /></Box>)}
+            { data.posts.map((post) => <Box p={1}><Post key={post.id} post={post} onNewComment={onNewComment}/></Box>)}
         </>
     );
 }
