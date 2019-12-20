@@ -31,7 +31,7 @@ function App() {
         <ApolloProvider client={client}>
             <CssBaseline />
             <Container maxWidth="md">
-                <SidebarNavigation onNewComment={onNewComment}/>
+                <Navigation onNewComment={onNewComment}/>
             </Container>
         </ApolloProvider>
     );
