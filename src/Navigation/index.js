@@ -10,6 +10,7 @@ import Posts from '../Posts';
 import Following from '../Following';
 import Profile from '../Profile';
 import NewPost from '../Post/New';
+import Login from '../Login';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function Navigation() {
+function Navigation({ onLogin }) {
     const classes = useStyles();
     return (
         <Router>
@@ -36,6 +37,9 @@ function Navigation() {
                     </Route>
                     <Route path="/newpost">
                         <NewPost />
+                    </Route>
+                    <Route path="/login">
+                        <Login onLogin={onLogin} />
                     </Route>
 
                 </Switch>
