@@ -3,7 +3,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import client from './graphql';
-import SidebarNavigation from './SidebarNavigation';
+import Navigation from './Navigation';
 import Posts from './Posts';
 import Following from './Following';
 import Profile from './Profile';
@@ -61,7 +61,7 @@ function App() {
         <ApolloProvider client={client}>
             <CssBaseline />
             <Container maxWidth="md">
-                <SidebarNavigation pages={pages} />
+                <Navigation pages={pages} />
             </Container>
         </ApolloProvider>
     );
