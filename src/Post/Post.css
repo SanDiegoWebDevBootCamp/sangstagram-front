@@ -17,3 +17,7 @@
 .photo {
 	width: 16rem;
 }
+
+img {
+	border-radius: 8px;
+  }

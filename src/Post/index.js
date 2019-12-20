@@ -12,11 +12,10 @@ const Post = ({ post, onNewComment }) => {
         photoUrl, caption, datePublished, user, likes, comments,
     } = post;
     const publishedDate = new Date(datePublished);
-    const { username } = user;
 
     return (
         <>
-            <Header publishedDate={publishedDate} userId={username} />
+            <Header publishedDate={publishedDate} user={user} />
             <div className="wrapper">
                 <Box p={1} className="left">
                     <Photo photoUrl={photoUrl} />

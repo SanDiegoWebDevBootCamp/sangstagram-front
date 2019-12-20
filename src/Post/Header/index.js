@@ -1,12 +1,12 @@
 import React from 'react';
+import Avatar from '@material-ui/core/Avatar';
 import PublishedDate from './PublishedDate';
-import UserId from './UserId';
 import './header.css';
 
-const Header = ({ userId, publishedDate }) => (
+const Header = ({ user, publishedDate }) => (
     <div className="header">
         <PublishedDate publishedDate={publishedDate} />
-        <UserId userId={userId} />
+        <Avatar alt={user.name} src={user.avatar} />
     </div>
 );
 

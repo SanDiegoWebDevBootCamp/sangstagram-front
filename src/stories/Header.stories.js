@@ -1,6 +1,6 @@
 import React from 'react';
+import * as faker from 'faker';
 import PublishedDate from '../Post/Header/PublishedDate';
-import UserId from '../Post/Header/UserId';
 import Header from '../Post/Header';
 
 export default {
@@ -9,10 +9,11 @@ export default {
 
 
 const publishedDate = new Date();
-
-const userId = 'byum1996';
+const user = {
+    ...faker.helpers.userCard(),
+    avatar: faker.image.avatar(),
+};
 
 
 export const publishedRender = () => <PublishedDate publishedDate={publishedDate} />;
-export const userIdRender = () => <UserId userId={userId} />;
-export const headerRender = () => <Header publishedDate={publishedDate} userId={userId} />;
+export const headerRender = () => <Header publishedDate={publishedDate} user={user} />;
