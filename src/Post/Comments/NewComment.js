@@ -16,14 +16,14 @@ const NewComment = ({ onSubmit }) => {
 
     if (shouldDisplayNewComment) {
         return (
-            <form onSubmit={handleSubmit(onSubmit)} className="newComment">
+            <form onSubmit={handleSubmit(onSubmit)} className="newcomment">
                 <TextField
                     id="standard-basic"
                     label="New comment"
                     multiline
                     rowsMax="4"
                     inputRef={register({ required: true })}
-                    name="newcomment"
+                    name="comment"
                 />
                 <Button type="submit">Submit</Button>
             </form>
