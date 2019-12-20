@@ -39,7 +39,14 @@ function Posts({ onNewComment }) {
 
     return (
         <>
-            { data.posts.map((post) => <Box p={1}><Post key={post.id} post={post} onNewComment={onNewComment}/></Box>)}
+            {
+                data.posts.map((post) => (
+                    <Box key={post.id} p={1}>
+                        <Post post={post} onNewComment={onNewComment} />
+                    </Box>
+                ))
+
+            }
         </>
     );
 }

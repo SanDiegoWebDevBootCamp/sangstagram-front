@@ -3,8 +3,11 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from '@material-ui/core/Container';
 import client from './graphql';
-import Navigation from './Navigation';
-import SidebarNavigation from './SidebarNavigation'
+import SidebarNavigation from './SidebarNavigation';
+import Posts from './Posts';
+import Following from './Following';
+import Profile from './Profile';
+import NewPost from './Post/New';
 
 // this is a temporary user
 // will eventually get it from backend after authentication
@@ -27,11 +30,38 @@ function App() {
         saveNewComment(comment);
     };
 
+    const pages = [
+        {
+            route: '/',
+            isExact: true,
+            title: 'Posts',
+            render: () => (<Posts onNewComment={onNewComment} />),
+        },
+        {
+            route: '/following',
+            isExact: false,
+            title: 'Following',
+            render: () => (<Following />),
+        },
+        {
+            route: '/profile',
+            isExact: false,
+            title: 'Profile',
+            render: () => (<Profile />),
+        },
+        {
+            route: '/newpost',
+            isExact: false,
+            title: 'New Post',
+            render: () => (<NewPost />),
+        },
+    ];
+
     return (
         <ApolloProvider client={client}>
             <CssBaseline />
             <Container maxWidth="md">
-                <SidebarNavigation onNewComment={onNewComment}/>
+                <SidebarNavigation pages={pages} />
             </Container>
         </ApolloProvider>
     );
