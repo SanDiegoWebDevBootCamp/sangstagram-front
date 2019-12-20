@@ -16,7 +16,7 @@ const NewComment = ({ onSubmit }) => {
 
     if (shouldDisplayNewComment) {
         return (
-            <form onSubmit={handleSubmit(onSubmit)} className="newcomment">
+            <form onSubmit={handleSubmit(onSubmit)} className="newComment">
                 <TextField
                     id="standard-basic"
                     label="New comment"
