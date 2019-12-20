@@ -5,7 +5,7 @@ import IconButton from '@material-ui/core/IconButton';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import SidebarStylesUsage from './SidebarStyles';
+import useStyles from './SidebarStyles';
 
 const classes = useStyles();
 const [open, setOpen] = React.useState(false);

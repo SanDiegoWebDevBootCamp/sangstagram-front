@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
-import SidebarStylesUsage from './SidebarStyles';
+import useStyles from './SidebarStyles';
 
 const classes = useStyles();
 const [open] = React.useState(false);

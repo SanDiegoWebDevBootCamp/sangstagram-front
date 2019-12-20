@@ -7,7 +7,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import SidebarStylesUsage from './SidebarStyles';
+import useStyles from './SidebarStyles';
 
 const classes = useStyles();
 const theme = useTheme();

@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import SideBarDrawer from './SidebarDrawer';
@@ -6,7 +7,7 @@ import SideBarAppBar from './SidebarAppBar';
 
 function Sidebar() {
     return (
-        <div className={classes.root}>
+        <div>
             <CssBaseline />
             <SideBarAppBar />
             <SideBarDrawer />
