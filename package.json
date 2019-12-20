@@ -12,6 +12,7 @@
     "@storybook/addons": "^5.2.6",
     "@storybook/react": "^5.2.6",
     "apollo-boost": "^0.4.4",
+    "clsx": "^1.0.4",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "faker": "^4.1.0",
