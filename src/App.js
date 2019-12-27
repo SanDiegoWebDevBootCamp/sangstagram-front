@@ -10,7 +10,8 @@ import Following from './Following';
 import Profile from './Profile';
 import NewPost from './Post/New';
 
-const authUrl = `${process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000'}/auth/google`;
+console.log(process.env.REACT_APP_BACKEND_BASEURL);
+const authUrl = `${process.env.REACT_APP_BACKEND_BASEURL || 'http://localhost:5000'}/auth/google`;
 
 // this is a temporary user
 // will eventually get it from backend after authentication
@@ -40,30 +41,35 @@ function App() {
             route: '/',
             isExact: true,
             title: 'Posts',
+            isAuthed: true,
             render: () => (<Posts onNewComment={onNewComment} />),
         },
         {
             route: '/following',
             isExact: false,
             title: 'Following',
+            isAuthed: true,
             render: () => (<Following />),
         },
         {
             route: '/profile',
             isExact: false,
             title: 'Profile',
+            isAuthed: true,
             render: () => (<Profile />),
         },
         {
             route: '/newpost',
             isExact: false,
             title: 'New Post',
+            isAuthed: true,
             render: () => (<NewPost />),
         },
         {
             route: '/login',
             isExact: false,
             title: 'Login',
+            isAuthed: false,
             render: () => (<Button href={authUrl}>Login with Google</Button>),
         },
     ];

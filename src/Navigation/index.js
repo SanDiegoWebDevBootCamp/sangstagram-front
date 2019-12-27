@@ -19,6 +19,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import AuthenticatedRoute from '../AuthenticatedRoute';
 
 const drawerWidth = 240;
 
@@ -77,6 +78,18 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: 0,
     },
 }));
+
+const renderAuthenticatedRoute = (page) => (
+    <AuthenticatedRoute exact={page.isExact} key={page.route} path={page.route}>
+        { page.render() }
+    </AuthenticatedRoute>
+);
+
+const renderRoute = (page) => (
+    <Route exact={page.isExact} key={page.route} path={page.route}>
+        { page.render() }
+    </Route>
+)
 
 export default function SidebarNavigation({ pages }) {
     const classes = useStyles();
@@ -154,9 +167,7 @@ export default function SidebarNavigation({ pages }) {
                     <Switch>
                         {
                             pages.map((page) => (
-                                <Route exact={page.isExact} key={page.route} path={page.route}>
-                                    { page.render() }
-                                </Route>
+                                page.isAuthed ? renderAuthenticatedRoute(page) : renderRoute(page)
                             ))
                         }
                     </Switch>
