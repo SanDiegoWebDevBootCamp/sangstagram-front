@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import { useCookies } from 'react-cookie';
 import Post from './Post';
 
 
@@ -32,7 +33,13 @@ const POSTS = gql`
 
 
 function Posts({ onNewComment }) {
-    const { loading, error, data } = useQuery(POSTS);
+    const [cookies] = useCookies(['jwt']);
+    const options = {
+        context: {
+            jwt: cookies.jwt,
+        },
+    };
+    const { loading, error, data } = useQuery(POSTS, options);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
