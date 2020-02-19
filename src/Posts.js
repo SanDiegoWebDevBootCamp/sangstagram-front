@@ -5,7 +5,6 @@ import { gql } from 'apollo-boost';
 import { useCookies } from 'react-cookie';
 import Post from './Post';
 
-
 const POSTS = gql`
     {
         posts {
